@@ -6,19 +6,16 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/profil" methods=["GET", "POST"])
-def profil():
-    if request.method == "POST":
-        brukernavn = request.form["brukernavn"]
 
-        passord = request.form["passord"]
-
-        return render_template("profil.html",
-                               brukernavn=brukernavn,
-                               passord=passord,)
+@app.route("/bestilling")
+def registrering():
     return render_template("registrering.html")
 
-@app.route("/registrering")
+@app.route("/bestilling")
+def registrering():
+    return render_template("registrering.html")
+
+@app.route("/resultat")
 def registrering():
     return render_template("registrering.html")
 
