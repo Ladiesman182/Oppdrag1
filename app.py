@@ -7,17 +7,17 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/bestilling")
+@app.route("/registrering")
 def registrering():
     return render_template("registrering.html")
 
 @app.route("/bestilling")
-def registrering():
-    return render_template("registrering.html")
+def bestilling():
+    return render_template("bestilling.html")
 
 @app.route("/resultat")
-def registrering():
-    return render_template("registrering.html")
+def resultat():
+    return render_template("resultat.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

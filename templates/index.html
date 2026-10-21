@@ -5,29 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VBN</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
     <header class="navbar">
-        <a href="/" class="brand">Lån ustyr for IM</a>
-        <div class="dropdown">
-            <button class="dropdown-btn" type="button">Produkter ▾</button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Produkt 1</a></li>
-                <li><a href="#">Produkt 2</a></li>
-                <li><a href="#">Produkt 3</a></li>
-            </ul>
-        </div>
+        <a href="/" class="brand">Informasjonsteknologi og medieproduksjon</a>
     </header>
 
     <section class="Main1">
+        <img class="Main1_img" src="{{ url_for('static', filename='bilder/BILDE1.png') }}" alt="Utstyr til låning">
+
         <div class="Main1_content">
-            <h1>Ustyr</h1>
-            <form class="search" role="search">
-                <input type="search" placeholder="Søk Etter Produkter..." aria-label="Søk">
-            </form>
+            <h1>Lån utstyr for IM</h1>
+            <p>Trykk her for å låne utstyr.</p>
+            <a href="/" class="btn">Lån utstyr</a>
         </div>
     </section>
 
