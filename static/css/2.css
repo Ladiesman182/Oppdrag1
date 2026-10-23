@@ -1,0 +1,53 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Main1_img {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}   
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

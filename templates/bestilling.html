@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Låning av Utstyr</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/2.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('index') }}" class="brand">
+            Informasjonsteknologi og medieproduksjon
+        </a>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Hjem</a>
+            <a href="{{ url_for('bestilling') }}">Bestilling</a>
+            <a href="{{ url_for('om') }}">Om oss</a>
+        </nav>
+    </header>
+
+    <h1>Låning av Utstyr</h1>
+
+    <form method="POST" action="{{ url_for('bestilling') }}">
+        <label>Navn:</label>
+        <input type="text" name="navn" required>
+
+        <br><br>
+
+        <label>Hvilken Klasse går du i?</label>
+        <select tabindex="1" name="Klasse">
+            <option value="volvo">1IMA</option>
+            <option value="volvo">1IMB</option>
+            <option value="volvo">1IMC</option>
+            <option value="volvo">1IMD</option>
+            <option value="volvo">1IME</option>
+            <option value="volvo">1IMF</option>
+            <option value="volvo">2IMM</option>
+            <option value="volvo">3IMM</option>>
+        </select>
+
+
+        <br><br>
+
+        
+        <label>E-post:</label>
+        <input type="email" name="epost" required>
+
+        <br><br>
+
+        <label>Hva har du lyst å låne?</label>
+        <textarea name="kommentar"></textarea>
+
+        <br><br>
+
+        <button type="submit">Send bestilling!</button>
+    </form>
+
+    <img class="Main1_img" src="{{ url_for('static', filename='bilder/BILDE1.png') }}" alt="Utstyr til låning">
+
+</body>
+
+</html>

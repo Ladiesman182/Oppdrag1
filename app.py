@@ -7,17 +7,29 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/registrering")
-def registrering():
-    return render_template("registrering.html")
+@app.route("/om")
+def om():
+    return render_template("om.html")
 
-@app.route("/bestilling")
+@app.route("/bestilling", methods=["GET", "POST"])
 def bestilling():
+    if request.method == "POST":
+        navn = request.form["navn"]
+        klasse = request.form["Klasse"]
+        epost = request.form["epost"]
+        kommentar = request.form["kommentar"]
+
+        return render_template(
+            "resultat.html",
+            navn=navn,
+            epost=epost,
+            kommentar=kommentar,
+            klasse=klasse
+        )     
+
     return render_template("bestilling.html")
 
-@app.route("/resultat")
-def resultat():
-    return render_template("resultat.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss | IMustyr.no</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/3.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('index') }}" class="brand">
+            Informasjonsteknologi og medieproduksjon
+        </a>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Hjem</a>
+            <a href="{{ url_for('bestilling') }}">Bestilling</a>
+            <a href="{{ url_for('om') }}">Om oss</a>
+        </nav>
+    </header>
+
+    <main class="om">
+
+        <section class="om1">
+            <p class="eyebrow">OM IMUSTYR.NO</p>
+
+            <h1>Utstyr til dine ideer.</h1>
+
+            <p class="tekst">
+                Vi gjør det enklere for elever å låne utstyr
+                og utforske teknologi, kreativitet og medieproduksjon.
+            </p>
+
+            <a href="/bestilling" class="Knapp">
+                Lån utstyr
+            </a>
+        </section>
+
+    </main>
+
+    <img class="Main1_img" src="{{ url_for('static', filename='bilder/BILDE1.png') }}" alt="Bakgrunn">
+
+</body>
+
+</html>

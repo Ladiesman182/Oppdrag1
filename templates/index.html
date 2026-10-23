@@ -4,15 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VBN</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>IMustyr.no</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/1.css') }}">
 </head>
 
 <body>
-
     <header class="navbar">
-        <a href="/" class="brand">Informasjonsteknologi og medieproduksjon</a>
+        <a href="{{ url_for('index') }}" class="brand">
+            Informasjonsteknologi og medieproduksjon
+        </a>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Hjem</a>
+            <a href="{{ url_for('bestilling') }}">Bestilling</a>
+            <a href="{{ url_for('om') }}">Om oss</a>
+        </nav>
     </header>
+
 
     <section class="Main1">
         <img class="Main1_img" src="{{ url_for('static', filename='bilder/BILDE1.png') }}" alt="Utstyr til låning">
@@ -20,7 +28,7 @@
         <div class="Main1_content">
             <h1>Lån utstyr for IM</h1>
             <p>Trykk her for å låne utstyr.</p>
-            <a href="/" class="btn">Lån utstyr</a>
+            <a href="{{ url_for('bestilling') }}" class="btn">Lån utstyr</a>
         </div>
     </section>
 
