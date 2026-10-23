@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Resultat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bestilling mottatt | IMustyr.no</title>
 </head>
 
 <body>
-    <h1>Registrering mottatt!</h1>
+    <main>
+        <h1>Bestilling mottatt!</h1>
 
-    <p>Navn: {{ navn }}</p>
-    <p>E-post: {{ epost }}</p>
-    <p>Kommentar: {{ kommentar }}</p>
+        <p><strong>Navn:</strong> {{ navn }}</p>
+        <p><strong>E-post:</strong> {{ epost }}</p>
+        <p><strong>Klasse:</strong> {{ klasse }}</p>
+        <p><strong>Du ønsker å låne:</strong> {{ produkter }}</p>
+        <a href="{{ url_for('bestilling') }}">Tilbake til bestilling</a>
+    </main>
 </body>
 
 </html>

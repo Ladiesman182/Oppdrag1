@@ -17,14 +17,14 @@ def bestilling():
         navn = request.form["navn"]
         klasse = request.form["Klasse"]
         epost = request.form["epost"]
-        kommentar = request.form["kommentar"]
+        produkter = request.form["produkter"]
 
         return render_template(
             "resultat.html",
             navn=navn,
             epost=epost,
-            kommentar=kommentar,
-            klasse=klasse
+            klasse=klasse,
+            produkter=produkter
         )     
 
     return render_template("bestilling.html")

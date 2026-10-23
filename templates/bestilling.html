@@ -23,42 +23,49 @@
         </nav>
     </header>
 
-    <h1>Låning av Utstyr</h1>
+    <main class="bestilling">
+        <h1>Låning av utstyr</h1>
 
-    <form method="POST" action="{{ url_for('bestilling') }}">
-        <label>Navn:</label>
-        <input type="text" name="navn" required>
+        <form method="POST" action="{{ url_for('bestilling') }}">
+            <label for="navn">Navn</label>
+            <input type="text" id="navn" name="navn" required>
 
-        <br><br>
+            <label for="klasse">Hvilken klasse går du i?</label>
+            <select id="klasse" name="Klasse" required>
+                <option value="1IMA">1IMA</option>
+                <option value="1IMB">1IMB</option>
+                <option value="1IMC">1IMC</option>
+                <option value="1IMD">1IMD</option>
+                <option value="1IME">1IME</option>
+                <option value="1IMF">1IMF</option>
+                <option value="2IMM">2IMM</option>
+                <option value="3IMM">3IMM</option>
+            </select>
 
-        <label>Hvilken Klasse går du i?</label>
-        <select tabindex="1" name="Klasse">
-            <option value="volvo">1IMA</option>
-            <option value="volvo">1IMB</option>
-            <option value="volvo">1IMC</option>
-            <option value="volvo">1IMD</option>
-            <option value="volvo">1IME</option>
-            <option value="volvo">1IMF</option>
-            <option value="volvo">2IMM</option>
-            <option value="volvo">3IMM</option>>
-        </select>
+            <label for="epost">E-post</label>
+            <input type="email" id="epost" name="epost" required>
 
+            <label for="produkter">Hva har du lyst til å låne?</label>
+            <select id="produkter" name="produkter" required>
+                <option value="" disabled selected>Velg utstyr</option>
+                <option value="Kamera">Kamera</option>
+                <option value="Videokamera">Videokamera</option>
+                <option value="GoPro">GoPro</option>
+                <option value="Batterier">Batterier</option>
+                <option value="Trådløs mikrofon">Trådløs mikrofon</option>
+                <option value="Myggmikrofon">Myggmikrofon</option>
+                <option value="Shotgun-mikrofon">Shotgun-mikrofon</option>
+                <option value="USB-mikrofon">USB-mikrofon</option>
+                <option value="Minnekort">Minnekort</option>
+                <option value="Kameraveske">Kameraveske</option>
+                <option value="Green screen">Green screen</option>
+                <option value="Hodetelefoner">Hodetelefoner</option>
+                <option value="Kabler og adaptere">Kabler og adaptere</option>
+            </select>
 
-        <br><br>
-
-        
-        <label>E-post:</label>
-        <input type="email" name="epost" required>
-
-        <br><br>
-
-        <label>Hva har du lyst å låne?</label>
-        <textarea name="kommentar"></textarea>
-
-        <br><br>
-
-        <button type="submit">Send bestilling!</button>
-    </form>
+            <button type="submit">Send bestilling</button>
+        </form>
+    </main>
 
     <img class="Main1_img" src="{{ url_for('static', filename='bilder/BILDE1.png') }}" alt="Utstyr til låning">
 

@@ -64,8 +64,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     text-align: center;
     padding: 80px 24px;
+}
+
+.eyebrow {
+    margin: 0;
 }
 
 .Knapp {
@@ -83,4 +88,3 @@ body {
     background: #e2e2e2;
     transform: translateY(-2px);
 }
-
